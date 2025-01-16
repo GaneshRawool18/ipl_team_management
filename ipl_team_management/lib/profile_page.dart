@@ -1,11 +1,8 @@
 import 'dart:developer';
 import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:ipl_team_management/firebase_services.dart';
-import 'package:ipl_team_management/ipl_team.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -67,7 +64,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   decoration: const BoxDecoration(shape: BoxShape.circle),
                   clipBehavior: Clip.antiAlias,
                   child: selectedImage != null
-                      ? Image.file(File(selectedImage!))
+                      ? Image.file(
+                          File(selectedImage!),
+                          fit: BoxFit.cover,
+                        )
                       : Image.network(
                           "https://tse1.mm.bing.net/th?id=OIP.OKHQA3-ANqvg09xUAWwkPAHaHa&pid=Api&P=0&h=220",
                           fit: BoxFit.cover),
@@ -167,8 +167,9 @@ class _ProfilePageState extends State<ProfilePage> {
                           jersyNoController.text, iplTeamController.text);
 
                       setState(() {
-                        // clearContoller();
+                        clearContoller();
                       });
+                      selectedImage = null;
                     },
                     style: ButtonStyle(
                         backgroundColor: WidgetStatePropertyAll(addOnPress
