@@ -20,7 +20,8 @@ class FirebaseServices {
     log("Team name $teamName");
     DocumentReference refData =
         FirebaseFirestore.instance.collection("franchises").doc(teamName);
-    await refData.set(data);
+    DocumentReference docRef = refData.collection(name).doc(name);
+    docRef.set(data);
   }
 
   static void getFirebaseData(String teamName, context) async {
