@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286869701637",
+    "project_id": "cricketinfo-f211a",
+    "storage_bucket": "cricketinfo-f211a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286869701637:android:a1dfd077d0d9cf2a01c86c",
+        "android_client_info": {
+          "package_name": "com.example.ipl_team_management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAoDeU4an3_y7KM3JsJtFLDJoxc2OgSp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
